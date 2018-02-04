@@ -18,6 +18,8 @@ public class User {
 
 	private String password;
 
+	private String roleId;
+
 	public String get_id() {
 		return _id;
 	}
@@ -40,6 +42,14 @@ public class User {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getRoleId() {
+		return roleId;
+	}
+
+	public void setRoleId(String roleId) {
+		this.roleId = roleId;
 	}
 
 }

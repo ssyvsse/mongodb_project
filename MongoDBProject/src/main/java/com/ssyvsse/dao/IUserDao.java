@@ -1,6 +1,7 @@
 package com.ssyvsse.dao;
 
-import java.util.List;
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
 
 import com.ssyvsse.pojo.User;
 
@@ -9,10 +10,9 @@ import com.ssyvsse.pojo.User;
  *
  * @Date 2018年2月3日
  */
-public interface IUserDao {
+@Repository
+public interface IUserDao extends MongoRepository<User, Integer> {
 
-	List<User> findAll();
-
-	User saveAndFlush(User user);
-
+	User findByUsername(String username);
+	
 }
